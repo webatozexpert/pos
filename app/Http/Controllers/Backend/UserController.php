@@ -47,7 +47,7 @@ class UserController extends Controller
     }
     public function delete($id){
         $user = User::find($id);
-        if(file_exists('public/upload/user_image/' . $user->image) AND!empty($user->image)){
+        if(file_exists('public/upload/user_images/' . $user->image) AND!empty($user->image)){
         unlink('public/upload/user_images/'.$user->image);
         }
         $user -> delete();
